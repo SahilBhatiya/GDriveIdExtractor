@@ -291,11 +291,9 @@ textarea:hover {
 .switch {
     display: inline-block;
     height: 34px;
-    position: absolute;
+    position: relative;
     width: 60px;
-    top: 50%;
-    left: 30px;
-    transform: translateY(-50%);
+    margin-top: 20px;
 }
 
 .switch input {
@@ -338,14 +336,6 @@ input:checked+.slider:before {
 
 .slider.round:before {
     border-radius: 50%;
-}
-
-.Improve_span {
-    position: absolute;
-    margin-left: 20px;
-    top: 50%;
-    left: 90px;
-    transform: translateY(-50%);
 }
 
 .Height-1 {
