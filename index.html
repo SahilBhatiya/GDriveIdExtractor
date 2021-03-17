@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>EvenHelp</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body onload="ShowFooterData()">
+    <section class="container py-lg-5 text-center my-lg-5">
+        <div class="row">
+
+
+
+            <div class="col-lg-6 col-sm-12 py-2 Height mb-lg-5">
+                <textarea id="prefix" class="w-100 h-100 p-3" placeholder="Prefix Text, Eg : <audio controls> <source src='"></textarea>
+            </div>
+            <div class="col-lg-6 col-sm-12 py-2 Height mb-lg-5">
+                <textarea id="postfix" class="w-100 h-100 p-3 smooth-transition-normal" placeholder="Postfix Text, Eg : ' type='audio/mpeg'> Your browser does not support the audio element. </audio>"></textarea>
+            </div>
+            <div class="col-lg-6 col-sm-12 py-2 Height mb-lg-2">
+                <textarea id="DriveLinks" class="w-100 h-100 p-3 smooth-transition-normal" placeholder="Drive link, Eg : https://drive.google.com/file/d/1kazyfB4JHoZSmczN-FBVXB4C8qN5b46G/view?usp=sharing"></textarea>
+            </div>
+            <div class="col-lg-6 col-sm-12 py-2 Height mb-lg-2">
+                <textarea id="ExtractedDriveLinks" class="w-100 h-100 p-3 smooth-transition-normal" placeholder="Output, Eg : <audio controls> <source src='https://drive.google.com/uc?export=download&id=1YCc0kbEKaYNaRb7ngAu5LjeZPCFsvGVp' type='audio/mpeg'> Your browser does not support the audio element. </audio>"></textarea>
+            </div>
+
+            <div class="col-lg-6 col-sm-12 py-2 text-left my-5">
+                <div class="Width-1 Height-1">
+                    <label class="switch" for="checkbox">
+                        <input type="checkbox" id="checkbox"/>
+                        <div class="slider round"></div>
+                      </label>
+                    <span class="Improve_span"> Add"https://drive.google.com/uc?export=download&id=" </span>
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-sm-12 py-2">
+                <input type="button" value="Fetch" onclick="extractUrlID()" class="Submit-btn smooth-transition-normal">
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer Secion Start -->
+    <section class="wave_section mt-lg-5">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+    </section>
+
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="row pt-lg-5 pb-lg-2 d-flex justify-content-center">
+                <div class="col-lg-3 col-sm-12 text-left pt-4">
+                    EvenHelp is built for developers and designers. It's modular approach lets you create an original landing page for your brand.
+                    <div class="row pt-4">
+                        <div class="col-3">
+                            <div class="social-media">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xmlns:v="https://vecta.io/nano"><path d="M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077
+                    2.051-2.077z"/></svg>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="social-media">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 169.063 169.063" xmlns:v="https://vecta.io/nano"><path d="M122.406 0H46.654C20.929 0 0 20.93 0 46.655v75.752c0 25.726 20.929 46.655 46.654 46.655h75.752c25.727 0
+                    46.656-20.93 46.656-46.655V46.655C169.063 20.93 148.133 0 122.406 0zm31.657 122.407c0 17.455-14.201 31.655-31.656 31.655H46.654C29.2 154.063 15 139.862 15 122.407V46.655C15 29.201 29.2 15 46.654 15h75.752c17.455 0 31.656 14.201 31.656
+                    31.655v75.752zM84.531 40.97c-24.021 0-43.563 19.542-43.563 43.563s19.542 43.561 43.563 43.561 43.563-19.541 43.563-43.561S108.552 40.97 84.531 40.97zm0 72.123c-15.749 0-28.563-12.812-28.563-28.561s12.813-28.563 28.563-28.563 28.563 12.813
+                    28.563 28.563-12.814 28.561-28.563 28.561zm45.39-84.842c-2.89 0-5.729 1.17-7.77 3.22-2.051 2.04-3.23 4.88-3.23 7.78 0 2.891 1.18 5.73 3.23 7.78 2.04 2.04 4.88 3.22 7.77 3.22a11.11 11.11 0 0 0 7.78-3.22c2.05-2.05 3.22-4.89 3.22-7.78 0-2.9-1.17-5.74-3.22-7.78-2.04-2.05-4.88-3.22-7.78-3.22z"/></svg>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="social-media">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 310"><path d="M72 100H10c-3 0-5 2-5 5v200c0 2 2 5 5 5h62c3 0 5-3 5-5V105c0-3-2-5-5-5zM41 0a41 41 0 100 83 41 41 0 000-83zM230 95c-25 0-43 11-54 23v-13c0-3-2-5-5-5h-60c-3
+                    0-5 2-5 5v200c0 2 2 5 5 5h62c3 0 5-3 5-5v-99c0-34 9-47 33-47 25 0 27 21 27 48v98c0 2 2 5 5 5h62c3 0 5-3 5-5V195c0-50-9-100-80-100z"/></svg>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="social-media">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 310"><path d="M72 100H10c-3 0-5 2-5 5v200c0 2 2 5 5 5h62c3 0 5-3 5-5V105c0-3-2-5-5-5zM41 0a41 41 0 100 83 41 41 0 000-83zM230 95c-25 0-43 11-54 23v-13c0-3-2-5-5-5h-60c-3
+                    0-5 2-5 5v200c0 2 2 5 5 5h62c3 0 5-3 5-5v-99c0-34 9-47 33-47 25 0 27 21 27 48v98c0 2 2 5 5 5h62c3 0 5-3 5-5V195c0-50-9-100-80-100z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-2 pt-4"></div>
+
+                <div class="col-lg-2 text-left line-height-1 pt-4 footer-list">
+                    <h6 class="letter-spacing-10">
+                        EvenHelp
+                    </h6>
+                    <ul style="list-style-type:none; padding-left: 0px;">
+                        <li>Home</li>
+                        <li>Pricing</li>
+                        <li>Get started</li>
+                        <li>Help</li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 pt-4 text-left footer-list">
+                    <h6 class="letter-spacing-10">
+                        RESOURCES
+                    </h6>
+                    <ul style="list-style-type:none; padding-left: 0px;">
+                        <li>Learning</li>
+                        <li>Support center</li>
+                        <li>Frequent questions</li>
+                        <li>Schedule a demo</li>
+                        <li>Brand kit</li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 pt-4 text-left footer-list">
+                    <h6 class="letter-spacing-10">
+                        TERMS
+                    </h6>
+                    <ul style="list-style-type:none; padding-left: 0px;">
+                        <li>Terms of Service</li>
+                        <li>Privacy policy</li>
+                        <li>Services</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="container-fluid Bottom-Foter">
+        <div class="text-center w-100 pb-2" id="DateAtFooter">
+        </div>
+    </div>
+
+    <!-- Footer Section End -->
+
+
+    <!-- Script Section -->
+    <script async src="assets/js/Footer.js"></script>
+
+    <script>
+        function extractUrlID() {
+
+            var IsLink = document.getElementById("checkbox").checked;
+            var prefix, postfix, Url;
+            try {
+                prefix = document.getElementById("prefix").value;
+            } catch {
+                prefix = "";
+            }
+
+            if (IsLink == true)
+                prefix += "https://drive.google.com/uc?export=download&id=";
+
+            try {
+                postfix = document.getElementById("postfix").value;
+            } catch {
+                postfix = "";
+            }
+
+            document.getElementById("ExtractedDriveLinks").value = "";
+
+            try {
+                Url = document.getElementById("DriveLinks").value.split('\n');
+            } catch {
+                Url = "";
+            }
+
+            for (var i = 0; i < Url.length; i++) {
+                var expression = Url[i].match(/[-\w]{25,}/);
+                var newEx = expression[0];
+                document.getElementById("ExtractedDriveLinks").value += "\n" + prefix + newEx + postfix + "\n";
+            }
+
+
+        }
+    </script>
+
+</body>
+
+</html>
